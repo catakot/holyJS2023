@@ -1,6 +1,6 @@
 #root {
   height: 100%;
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -33,6 +33,7 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 2rem;
+  background-color: black;
 }
 
 .redFill {
@@ -51,10 +52,43 @@
     min-width: 100px;
     max-width: 200px;
   }
+
+  span {
+    color: white;
+  }
+
+  .red {
+    color: red;
+  }
+  .orange {
+    color: orange;
+  }
+  .yellow {
+    color: yellow;
+  }
+  .green {
+    color: green;
+  }
+  .aqua {
+    color: aqua;
+  }
+  .blue {
+    color: blue;
+  }
+  .pink {
+    color: pink;
+  }
+  .purple {
+    color: purple;
+  }
+  .grey {
+    color: grey;
+  }
 }
 
 .drawPanel {
   position: relative;
+  width: 500px;
   .frame1 {
     position: absolute;
     top: 50px;

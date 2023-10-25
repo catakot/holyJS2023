@@ -1,0 +1,69 @@
+#root {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.example {
+  width: 800px;
+  height: 500px;
+  background-color: wheat;
+  padding-top: 200px;
+  padding-left: 300px;
+}
+
+.bicycle {
+  position: relative;
+}
+
+.frame {
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  width: 500px;
+  fill: aqua;
+  z-index: 1;
+}
+
+.wheel1 {
+  position: absolute;
+  top: 65px;
+  left: -70px;
+  width: 300px;
+  fill: pink;
+}
+
+.wheel2 {
+  position: absolute;
+  top: 65px;
+  left: 290px;
+  width: 300px;
+  fill: pink;
+}
+
+.steeringWheel {
+  position: absolute;
+  top: -20px;
+  left: 280px;
+  width: 100px;
+  fill: grey;
+  z-index: 2;
+}
+
+.seat {
+  position: absolute;
+  top: -10px;
+  left: 80px;
+  width: 90px;
+  z-index: 2;
+  fill: orange;
+}
+
+.pedals {
+  position: absolute;
+  top: 170px;
+  left: 210px;
+  width: 70px;
+  z-index: 2;
+  fill: green;
+}
