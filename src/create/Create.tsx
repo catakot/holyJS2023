@@ -1,4 +1,3 @@
-import {BicycleSpareParts} from '../icons';
 import './Create.scss';
 
 /** Example:

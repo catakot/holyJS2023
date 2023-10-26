@@ -1,9 +1,7 @@
-import {ColorPicker, Select, Slider, Space, InputNumber} from 'antd';
+import {ColorPicker, Slider, Space, InputNumber} from 'antd';
 import './bike-editor.scss';
 import {IBikePart} from './bike-ediotr-types';
 import './part-editor.scss';
-
-const {Option} = Select;
 
 type PartEditorProps = {part: IBikePart; onChange: (part: IBikePart) => void};
 
