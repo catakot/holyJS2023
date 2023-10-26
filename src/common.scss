@@ -1,0 +1,59 @@
+@keyframes wheel-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.wheel,
+.pedals {
+  animation: wheel-spin infinite 20s linear;
+}
+
+.flexRow,
+.flexColum {
+  display: flex;
+  gap: 1rem;
+}
+.flexColum {
+  flex-direction: column;
+}
+
+.red {
+  color: red;
+  fill: red;
+}
+.orange {
+  color: orange;
+  fill: orange;
+}
+.yellow {
+  color: yellow;
+  fill: yellow;
+}
+.green {
+  color: green;
+  fill: green;
+}
+.aqua {
+  color: aqua;
+  fill: aqua;
+}
+.blue {
+  color: blue;
+  fill: blue;
+}
+.pink {
+  color: pink;
+  fill: pink;
+}
+.purple {
+  color: purple;
+  fill: purple;
+}
+.grey {
+  color: grey;
+  fill: grey;
+}

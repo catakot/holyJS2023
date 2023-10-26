@@ -4,7 +4,7 @@ import './bicycle1.scss';
 export const Bicycle1 = () => {
   return (
     <div className="example">
-      <div className="bicycle">
+      <div className="bicycle1">
         <BicycleSpareParts.frame.frame1 className="frame1" />
         <BicycleSpareParts.pedals.pedals1 className="pedals1" />
         <BicycleSpareParts.wheel.wheel1 className="wheel1" />

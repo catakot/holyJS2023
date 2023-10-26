@@ -11,9 +11,5 @@ import './Create.scss';
 */
 
 export const Create = () => {
-  return (
-    <>
-      {/* Enter your code here */}
-    </>
-  );
+  return <div className="createPanel">{/* Enter your code here */}</div>;
 };

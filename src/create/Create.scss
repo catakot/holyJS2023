@@ -1,29 +1,31 @@
-.frame {
-  position: absolute;
-  // Enter your code here
-}
+.createPanel {
+  & .frame {
+    position: absolute;
+    // Enter your code here
+  }
 
-.wheel1 {
-  position: absolute;
-  // Enter your code here
-}
+  & .wheel1 {
+    position: absolute;
+    // Enter your code here
+  }
 
-.wheel2 {
-  position: absolute;
-  // Enter your code here
-}
+  & .wheel2 {
+    position: absolute;
+    // Enter your code here
+  }
 
-.steeringWheel {
-  position: absolute;
-  // Enter your code here
-}
+  & .steeringWheel {
+    position: absolute;
+    // Enter your code here
+  }
 
-.seat {
-  position: absolute;
-  // Enter your code here
-}
+  & .seat {
+    position: absolute;
+    // Enter your code here
+  }
 
-.pedals {
-  position: absolute;
-  // Enter your code here
+  & .pedals {
+    position: absolute;
+    // Enter your code here
+  }
 }

@@ -3,6 +3,7 @@ import {Frame2} from './bicycle2/frame2';
 import {Frame3} from './bicycle3/frame3';
 import {Frame4} from './bicycle4/frame4';
 import {Pedals1} from './bicycle1/pedals1';
+import {Pedals2} from './bicycle2/pedals2';
 import {Pedals3} from './bicycle3/pedals3';
 import {Pedals4} from './bicycle4/pedals4';
 import {Seat1} from './bicycle1/seat1';
@@ -15,6 +16,10 @@ import {Wheel1} from './bicycle1/wheel1';
 import {Wheel2} from './bicycle2/wheel2';
 import {Wheel3} from './bicycle3/wheel3';
 import {Wheel4} from './bicycle4/wheel4';
+import {SteeringWheel2} from './bicycle2/steeringWheel2';
+import {SteeringWheel4} from './bicycle4/steeringWheel4';
+
+export {Colors} from './iconTypes';
 
 export const BicycleSpareParts = {
   wheel: {
@@ -37,12 +42,22 @@ export const BicycleSpareParts = {
   },
   pedals: {
     pedals1: Pedals1,
-    pedals2: Pedals1,
+    pedals2: Pedals2,
     pedals3: Pedals3,
     pedals4: Pedals4,
   },
   steeringWheel: {
     steeringWheel1: SteeringWheel1,
+    steeringWheel2: SteeringWheel2,
     steeringWheel3: SteeringWheel3,
+    steeringWheel4: SteeringWheel4,
   },
-};
+} as const;
+
+export const AllBicycleSpareParts = {
+  ...BicycleSpareParts.wheel,
+  ...BicycleSpareParts.frame,
+  ...BicycleSpareParts.pedals,
+  ...BicycleSpareParts.steeringWheel,
+  ...BicycleSpareParts.seat,
+} as const;

@@ -12,59 +12,59 @@
   padding-left: 300px;
 }
 
-.bicycle {
+.bicycle3 {
   position: relative;
-}
 
-.frame {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 400px;
-  fill: green;
-  z-index: 1;
-}
+  & .frame {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    fill: green;
+    z-index: 1;
+  }
 
-.wheel1 {
-  position: absolute;
-  top: 180px;
-  left: -85px;
-  width: 200px;
-  fill: red;
-}
+  & .wheel1 {
+    position: absolute;
+    top: 180px;
+    left: -85px;
+    width: 200px;
+    fill: red;
+  }
 
-.wheel2 {
-  position: absolute;
-  top: 90px;
-  left: 230px;
-  width: 300px;
-  fill: red;
-}
+  & .wheel2 {
+    position: absolute;
+    top: 90px;
+    left: 230px;
+    width: 300px;
+    fill: red;
+  }
 
-.steeringWheel {
-  position: absolute;
-  top: -50px;
-  left: 250px;
-  width: 100px;
-  fill: pink;
-  z-index: 2;
-}
+  & .steeringWheel {
+    position: absolute;
+    top: -50px;
+    left: 250px;
+    width: 100px;
+    fill: pink;
+    z-index: 2;
+  }
 
-.seat {
-  position: absolute;
-  top: 0px;
-  left: 80px;
-  width: 90px;
-  z-index: 2;
-  fill: aqua;
-  transform: rotate(30deg);
-}
+  & .seat {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    width: 90px;
+    z-index: 2;
+    fill: aqua;
+    transform: rotate(30deg);
+  }
 
-.pedals {
-  position: absolute;
-  top: 200px;
-  left: 345px;
-  width: 70px;
-  z-index: 0;
-  fill: purple;
+  & .pedals {
+    position: absolute;
+    top: 200px;
+    left: 345px;
+    width: 70px;
+    z-index: 0;
+    fill: purple;
+  }
 }
