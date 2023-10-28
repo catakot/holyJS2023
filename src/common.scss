@@ -7,8 +7,7 @@
   }
 }
 
-.wheel,
-.pedals {
+.rotate {
   animation: wheel-spin infinite 20s linear;
 }
 
@@ -20,40 +19,9 @@
 .flexColum {
   flex-direction: column;
 }
-
-.red {
-  color: red;
-  fill: red;
+.flex1 {
+  flex-grow: 1;
 }
-.orange {
-  color: orange;
-  fill: orange;
-}
-.yellow {
-  color: yellow;
-  fill: yellow;
-}
-.green {
-  color: green;
-  fill: green;
-}
-.aqua {
-  color: aqua;
-  fill: aqua;
-}
-.blue {
-  color: blue;
-  fill: blue;
-}
-.pink {
-  color: pink;
-  fill: pink;
-}
-.purple {
-  color: purple;
-  fill: purple;
-}
-.grey {
-  color: grey;
-  fill: grey;
+.hiddenOverflow {
+  overflow: hidden;
 }

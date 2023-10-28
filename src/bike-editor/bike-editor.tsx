@@ -1,13 +1,12 @@
-import {Select, Button} from 'antd';
+import {Button, Popconfirm, Space} from 'antd';
 import cn from 'classnames';
 import {useCallback, useState} from 'react';
 import './bike-editor.scss';
 import {PartEditor} from './part-editor';
-import {IBikePart, PartType} from './bike-ediotr-types';
+import {IBikePart, PartType} from './bike-editor-types';
 import {AllBicycleSpareParts} from '../icons';
-import {createBikePart} from './bike-editor-utils';
-
-const {Option} = Select;
+import {createBikePart, exportToFile} from './bike-editor-utils';
+import {BikePartSelector} from './bike-part-selector';
 
 export const BikeEditor = () => {
   const [selectedPart, setSelectedPart] = useState<IBikePart | undefined>();
@@ -42,59 +41,84 @@ export const BikeEditor = () => {
 
   return (
     <div className="bikeEditor">
-      <div className="addPanel">
-        <Select
-          style={{minWidth: '200px'}}
-          onChange={setPartToAdd}
-          value={partToAdd}
+      <Space
+        className={cn('hiddenOverflow')}
+        direction="vertical"
+        size="middle"
+      >
+        <BikePartSelector value={partToAdd} onChange={setPartToAdd} />
+
+        <div className="addPanel">
+          <Space size="middle">
+            <Button
+              type="primary"
+              onClick={onAddPartClick}
+              disabled={!partToAdd}
+            >
+              Добавить
+            </Button>
+            {partToAdd}
+          </Space>
+          <Space size="middle">
+            <Button
+              type="primary"
+              disabled={bikeParts.length == 0}
+              onClick={() => exportToFile(bikeParts)}
+            >
+              Экспорт
+            </Button>
+            <Button
+              type="primary"
+              danger
+              onClick={onRemovePart}
+              disabled={!selectedPart}
+            >
+              Удалить
+            </Button>
+            <Popconfirm
+              title="Очистить"
+              description="Удалить все добавленные  детали?"
+              onConfirm={onClearClick}
+              okText="Да"
+              cancelText="Нет"
+              disabled={bikeParts.length == 0}
+            >
+              <Button type="default" disabled={bikeParts.length == 0}>
+                Очистить
+              </Button>
+            </Popconfirm>
+          </Space>
+        </div>
+      </Space>
+      <div className={cn('hiddenOverflow flexColum')}>
+        {selectedPart && (
+          <PartEditor part={selectedPart} onChange={onPartUpdated} />
+        )}
+        <div
+          className="previewPanel"
+          onClick={() => setSelectedPart(undefined)}
         >
-          {Object.entries(AllBicycleSpareParts).map(([partName]) => (
-            <Option value={partName}>{partName}</Option>
-          ))}
-        </Select>
-        <Button type="primary" onClick={onAddPartClick}>
-          Добавить
-        </Button>
-        <Button
-          type="primary"
-          danger
-          onClick={onRemovePart}
-          disabled={!selectedPart}
-        >
-          Удалить
-        </Button>
-        <Button
-          type="default"
-          onClick={onClearClick}
-          disabled={bikeParts.length == 0}
-        >
-          Очистить
-        </Button>
-      </div>
-      {selectedPart && (
-        <PartEditor part={selectedPart} onChange={onPartUpdated} />
-      )}
-      <div className="previewPanel" onClick={() => setSelectedPart(undefined)}>
-        {bikeParts.map((p) => {
-          const Img = AllBicycleSpareParts[p.type];
-          return (
-            <Img
-              onClick={(e) => {
-                e.stopPropagation();
-                setSelectedPart(p);
-              }}
-              className={cn('previewImg', {
-                previewImgActive: p.id === selectedPart?.id,
-              })}
-              key={p.id}
-              color={p.color}
-              width={p.width}
-              x={p.x}
-              y={p.y}
-              angle={p.angle}
-            />
-          );
-        })}
+          {bikeParts.map((p) => {
+            const Img = AllBicycleSpareParts[p.type];
+            return (
+              <Img
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedPart(p);
+                }}
+                className={cn('previewImg', {
+                  previewImgActive: p.id === selectedPart?.id,
+                })}
+                key={p.id}
+                color={p.color}
+                width={p.width}
+                x={p.x}
+                y={p.y}
+                angle={p.angle}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

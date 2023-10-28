@@ -1,38 +1,5 @@
 #root {
-  height: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-
-.root {
-  display: grid;
-  grid-template-columns: 40% 1fr;
-  align-items: center;
-  gap: 2rem;
-  background-color: black;
-}
-
-.tools {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  flex-direction: row;
-  gap: 1rem;
-  border: 1px solid white;
-  padding: 1rem 2rem;
-
-  & svg {
-    fill: white;
-    min-width: 80px;
-    max-width: 100px;
-  }
-}
-
-.drawPanel {
-  position: relative;
-  align-self: stretch;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }

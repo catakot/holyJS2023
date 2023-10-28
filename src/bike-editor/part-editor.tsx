@@ -1,6 +1,6 @@
-import {ColorPicker, Slider, Space, InputNumber} from 'antd';
+import {ColorPicker, Slider, Space} from 'antd';
 import './bike-editor.scss';
-import {IBikePart} from './bike-ediotr-types';
+import {IBikePart} from './bike-editor-types';
 import './part-editor.scss';
 
 type PartEditorProps = {part: IBikePart; onChange: (part: IBikePart) => void};
@@ -25,28 +25,10 @@ export const PartEditor = (props: PartEditorProps) => {
         <Slider
           value={part.width}
           min={0}
-          style={{width: '150px'}}
+          style={{width: '100px'}}
           max={1000}
           onChange={(value) => {
             onChange({...part, width: value});
-          }}
-        />
-      </Space>
-      <Space direction="vertical" align="start">
-        X:
-        <InputNumber
-          value={part.x}
-          onChange={(value) => {
-            onChange({...part, x: value || 0});
-          }}
-        />
-      </Space>
-      <Space direction="vertical" align="start">
-        Y:
-        <InputNumber
-          value={part.y}
-          onChange={(value) => {
-            onChange({...part, y: value || 0});
           }}
         />
       </Space>
@@ -55,10 +37,34 @@ export const PartEditor = (props: PartEditorProps) => {
         <Slider
           value={part.angle}
           min={0}
-          style={{width: '150px'}}
+          style={{width: '100px'}}
           max={360}
           onChange={(value) => {
             onChange({...part, angle: value});
+          }}
+        />
+      </Space>
+      <Space direction="vertical" align="start">
+        X:
+        <Slider
+          value={part.x}
+          min={0}
+          max={1000}
+          style={{width: '150px'}}
+          onChange={(value) => {
+            onChange({...part, x: value});
+          }}
+        />
+      </Space>
+      <Space direction="vertical" align="start">
+        Y:
+        <Slider
+          value={part.y}
+          min={0}
+          max={1000}
+          style={{width: '150px'}}
+          onChange={(value) => {
+            onChange({...part, y: value});
           }}
         />
       </Space>
