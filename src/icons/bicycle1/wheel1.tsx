@@ -27,7 +27,7 @@ export const Wheel1 = React.memo(function Wheel1({
       className={`rotate ${className}`}
       viewBox="0 0 29.483686 29.483757"
       version="1.1"
-      id="svg1"
+      
     >
       <g
         id="g10"

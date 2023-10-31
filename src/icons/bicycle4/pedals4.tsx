@@ -28,7 +28,7 @@ export const Pedals4 = React.memo(function Pedals4({
       className={cn('rotate', className)}
       viewBox="0 0 8.6931505 10.748434"
       version="1.1"
-      id="svg1"
+      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g

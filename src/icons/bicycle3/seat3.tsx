@@ -27,7 +27,7 @@ export const Seat3 = React.memo(function Seat3({
       className={className}
       viewBox="0 0 26.458231 11.915009"
       version="1.1"
-      id="svg1"
+      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="layer1">

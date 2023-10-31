@@ -27,7 +27,7 @@ export const SteeringWheel3 = React.memo(function SteeringWheel3({
       className={className}
       viewBox="0 0 13.420772 6.8384047"
       version="1.1"
-      id="svg1"
+      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g

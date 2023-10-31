@@ -27,7 +27,7 @@ export const Frame3 = React.memo(function Frame3({
       fill={color}
       viewBox="0 0 45.476055 34.256046"
       version="1.1"
-      id="svg1"
+      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g
