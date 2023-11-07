@@ -21,7 +21,7 @@ export const Frame3 = React.memo(function Frame3({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+       width={width ? `${width}px` : undefined}
       style={style}
       className={className}
       fill={color}

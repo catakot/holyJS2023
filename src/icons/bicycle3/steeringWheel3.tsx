@@ -21,7 +21,7 @@ export const SteeringWheel3 = React.memo(function SteeringWheel3({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+       width={width ? `${width}px` : undefined}
       style={style}
       fill={color}
       className={className}

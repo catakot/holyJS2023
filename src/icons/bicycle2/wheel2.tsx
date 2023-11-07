@@ -21,13 +21,12 @@ export const Wheel2 = React.memo(function Wheel2({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+      width={width ? `${width}px` : undefined}
       style={style}
       fill={color}
       className={`rotate ${className}`}
       viewBox="0 0 1280.000000 1280.000000"
       version="1.1"
-      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g

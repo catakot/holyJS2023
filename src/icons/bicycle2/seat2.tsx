@@ -21,13 +21,12 @@ export const Seat2 = React.memo(function Seat2({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+      width={width ? `${width}px` : undefined}
       style={style}
       fill={color}
       className={className}
       viewBox="0 0 9.056159 3.7739198"
       version="1.1"
-      
       xmlns="http://www.w3.org/2000/svg"
     >
       <g

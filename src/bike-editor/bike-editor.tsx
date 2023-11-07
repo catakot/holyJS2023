@@ -41,13 +41,7 @@ export const BikeEditor = () => {
 
   return (
     <div className="bikeEditor">
-      <Space
-        className={cn('hiddenOverflow')}
-        direction="vertical"
-        size="middle"
-      >
-        <BikePartSelector value={partToAdd} onChange={setPartToAdd} />
-
+      <div className={cn('hiddenOverflow bikeEditorLeftColumn')}>
         <div className="addPanel">
           <Space size="middle">
             <Button
@@ -89,8 +83,9 @@ export const BikeEditor = () => {
             </Popconfirm>
           </Space>
         </div>
-      </Space>
-      <div className={cn('hiddenOverflow flexColum')}>
+        <BikePartSelector value={partToAdd} onChange={setPartToAdd} />
+      </div>
+      <div className={cn('hiddenOverflow bikeEditorRightColumn')}>
         {selectedPart && (
           <PartEditor part={selectedPart} onChange={onPartUpdated} />
         )}

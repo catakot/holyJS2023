@@ -22,7 +22,7 @@ export const Pedals1 = React.memo(function Pedals1({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+       width={width ? `${width}px` : undefined}
       style={style}
       fill={color}
       className={cn('rotate', className)}

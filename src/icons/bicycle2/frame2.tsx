@@ -21,13 +21,12 @@ export const Frame2 = React.memo(function Frame2({
     <svg
       transform={angle ? `rotate(${angle})` : undefined}
       onClick={onClick}
-      width={`${width}px`}
+      width={width ? `${width}px` : undefined}
       style={style}
       className={className}
       fill={color}
       viewBox="0 0 31.1845 38.199837"
       version="1.1"
-      
     >
       <g
         id="g20"

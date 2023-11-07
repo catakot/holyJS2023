@@ -11,7 +11,7 @@ interface BikePartSelectorProps {
 
 export const BikePartSelector = ({value, onChange}: BikePartSelectorProps) => {
   return (
-    <>
+    <div className="bikePartSelector">
       {Object.entries(BicycleSpareParts).map(([partsCategory, parts]) => {
         return (
           <div className="partsList" key={partsCategory}>
@@ -27,6 +27,6 @@ export const BikePartSelector = ({value, onChange}: BikePartSelectorProps) => {
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
