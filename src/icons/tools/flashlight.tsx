@@ -25,7 +25,7 @@ export const Flashlight = React.memo(function Flashlight({
       style={style}
       fill={color}
       className={className}
-      viewBox="0 0 16.933336 10.583337"
+      viewBox="0 0 16.933336 12.683337"
       version="1.1"
     >
       <g id="layer1">
