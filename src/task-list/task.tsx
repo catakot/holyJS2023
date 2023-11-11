@@ -16,7 +16,7 @@ export const Task = React.memo(() => {
   return (
     <div className="task">
       <Typography.Title level={1}>
-        <Link to="/tasks">{'<-'}</Link>
+        <Link to="/tasks">{'< '}</Link>
         {task.title}
       </Typography.Title>
       <Radio.Group
