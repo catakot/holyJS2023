@@ -4,6 +4,7 @@ import {AllBicycleSpareParts} from '../icons';
 import {Link, useParams} from 'react-router-dom';
 import {TASKS} from './task-list-constants';
 import './task.scss';
+import {Timer} from './timer';
 
 export const Task = React.memo(() => {
   const {taskId} = useParams();
@@ -28,13 +29,16 @@ export const Task = React.memo(() => {
         <Radio.Button value="preview">Результат</Radio.Button>
       </Radio.Group>
       {!showResult && (
-        <div className="description">
-          {task.description.map((item, i) => (
-            <Typography.Title key={i} level={2}>
-              {item}
-            </Typography.Title>
-          ))}
-        </div>
+        <>
+          <div className="description">
+            {task.description.map((item, i) => (
+              <Typography.Title key={i} level={1}>
+                {item}
+              </Typography.Title>
+            ))}
+          </div>
+          <Timer />
+        </>
       )}
       {showResult && (
         <div className="previewPanel">
